@@ -18,13 +18,34 @@ enum TransportMode: String, CaseIterable, Identifiable {
 
 struct CommuteFormView: View {
     
+    @State private var viewModel = CommuteViewModel()
+    
     @State private var distance: String = ""
     @State private var transportMode: TransportMode = .train
     private let modes = TransportMode.allCases
     
     var body: some View {
         NavigationStack {
-            Form {
+            List {
+                // ---- SECTION 1: TAX SUMMARY ---
+                Section {
+                    VStack(spacing: 8){
+                        Text("Estimated German Tax Refund")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        
+                        Text(viewModel.totalRefund,
+                             format: .currency(code: "EUR"))
+                        .font(.system(size: 36, weight: .bold, design: .rounded))
+                        .foregroundStyle(.green)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+                }
+                .listRowBackground(Color(.systemGray6))
+                
+                
+                // ---- SECTION 2: Iput fields ---
                 Section(header: Text("Trip Details")) {
                     TextField("Distnace (in km)", text: $distance)
                         .keyboardType(.decimalPad)
