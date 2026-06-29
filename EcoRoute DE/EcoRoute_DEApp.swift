@@ -11,7 +11,7 @@ import SwiftUI
 struct EcoRoute_DEApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CommuteFormView()
         }
     }
 }
