@@ -12,6 +12,14 @@ enum TransportMode: String, CaseIterable, Identifiable {
     case bike = "bike"
     case train = "train"
     
+    var iconName: String {
+        switch self {
+        case .car: return  "car.fill"
+        case .bike: return "bicycle.fill"
+        case .train: return "train.fill"
+        }
+    }
+    
     var id: Self { self }
 }
 
@@ -21,7 +29,7 @@ struct CommuteFormView: View {
     @State private var viewModel = CommuteViewModel()
     
     @State private var distance: String = ""
-    @State private var transportMode: TransportMode = .train
+    @State private var selectedTransportMode: TransportMode = .train
     private let modes = TransportMode.allCases
     
     var body: some View {
@@ -31,7 +39,7 @@ struct CommuteFormView: View {
                 Section {
                     VStack(spacing: 8){
                         Text("Estimated German Tax Refund")
-                            .font(.caption)
+                            .font(.body)
                             .foregroundColor(.secondary)
                         
                         Text(viewModel.totalRefund,
@@ -50,7 +58,7 @@ struct CommuteFormView: View {
                     TextField("Distnace (in km)", text: $distance)
                         .keyboardType(.decimalPad)
                     
-                    Picker("Transport Mode", selection: $transportMode) {
+                    Picker("Transport Mode", selection: $selectedTransportMode) {
                         ForEach(modes, id: \.self ) {
                             Text($0.rawValue.capitalized)
                                 
@@ -59,16 +67,61 @@ struct CommuteFormView: View {
                 }
                 
                 Button(action: {
-                    print("Saving trip: \(distance) km by \(transportMode.rawValue.capitalized)")
+                    viewModel.logNewTrip(distanceString: distance,
+                                         mode: selectedTransportMode)
+                    distance = ""
+                    
                 }) {
                     Text("Save Trip")
                         .frame(maxWidth: .infinity)
                         .alignmentGuide(.leading) { d in d[.leading] }
                 }
                 .buttonStyle(.borderedProminent)
+                .disabled(distance.isEmpty)
 
+                
+                // --- SECTION 3: RECENT COMMUTES (DYNAMIC LIST) ---
+                
+                Section(header: Text("Recent commutes \(viewModel.trips.count)")){
+                    
+                    if (viewModel.trips.isEmpty) {
+                        Text("No commutes yet")
+                            .foregroundStyle(.secondary)
+                            .italic()
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .padding()
+                        
+                    }else {
+                        
+                        ForEach(viewModel.trips) { trip in
+                            HStack {
+                                Image(systemName: trip.transportMode.iconName)
+                                    .foregroundColor(.accentColor)
+                                    .font(.title)
+                                    .frame(width: 30)
+                                
+                                VStack(alignment: .leading) {
+                                    Text("\(trip.transportMode.rawValue.capitalized)")
+                                        .font(.body)
+                                        .bold()
+                                    Text("\(trip.distance, specifier: "%.1f") km")
+                                }
+                                
+                                Spacer()
+                                
+                                Text(trip.taxRefundAmount, format: .currency(code: "EUR"))
+                                    .font(.callout)
+                                    .bold()
+                                    .foregroundColor(.green)
+                            }
+                            
+                            
+                        }
+                    }
+                    
+                }
             }
-            .navigationTitle("Log my commute")
+            .navigationTitle("EcoRoute DE")
         }
     }
 }
