@@ -11,7 +11,7 @@ struct CommuteTrip: Identifiable {
     let id: UUID = UUID()
     let date: Date
     let distance: Double
-    let transportMode: TransportMode!
+    let transportMode: TransportMode
     
     var taxRefundAmount: Double {
         return distance * 0.3
