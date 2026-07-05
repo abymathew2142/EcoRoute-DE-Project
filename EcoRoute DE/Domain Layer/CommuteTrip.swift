@@ -8,7 +8,7 @@
 import Foundation
 
 struct CommuteTrip: Identifiable {
-    let id: UUID = UUID()
+    let id: UUID
     let date: Date
     let distance: Double
     let transportMode: TransportMode
