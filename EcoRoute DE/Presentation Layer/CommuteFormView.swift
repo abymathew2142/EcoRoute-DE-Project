@@ -67,9 +67,11 @@ struct CommuteFormView: View {
                 }
                 
                 Button(action: {
-                    viewModel.logNewTrip(distanceString: distance,
-                                         mode: selectedTransportMode)
-                    distance = ""
+                    Task {
+                        await viewModel.logNewTrip(distanceString: distance,
+                                                   mode: selectedTransportMode)
+                        distance = ""
+                    }
                     
                 }) {
                     Text("Save Trip")
@@ -114,14 +116,20 @@ struct CommuteFormView: View {
                                     .bold()
                                     .foregroundColor(.green)
                             }
-                            
-                            
+                        }
+                        .onDelete { indexSet in
+                            Task {
+                                await viewModel.removeTrip(at: indexSet)
+                            }
                         }
                     }
                     
                 }
             }
             .navigationTitle("EcoRoute DE")
+            .task {
+                await viewModel.loadTrips()
+            }
         }
     }
 }
