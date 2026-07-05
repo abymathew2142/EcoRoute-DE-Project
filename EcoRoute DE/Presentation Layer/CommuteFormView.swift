@@ -53,7 +53,7 @@ struct CommuteFormView: View {
                 .listRowBackground(Color(.systemGray6))
                 
                 
-                // ---- SECTION 2: Iput fields ---
+                // ---- SECTION 2: Input fields ---
                 Section(header: Text("Trip Details")) {
                     TextField("Distnace (in km)", text: $distance)
                         .keyboardType(.decimalPad)
