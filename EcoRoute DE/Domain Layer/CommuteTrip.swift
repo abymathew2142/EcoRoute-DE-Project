@@ -7,6 +7,22 @@
 
 import Foundation
 
+enum TransportMode: String, CaseIterable, Identifiable {
+    case car = "car"
+    case bike = "bike"
+    case train = "train"
+    
+    var iconName: String {
+        switch self {
+        case .car: return  "car.fill"
+        case .bike: return "bicycle.fill"
+        case .train: return "train.fill"
+        }
+    }
+    
+    var id: Self { self }
+}
+
 struct CommuteTrip: Identifiable {
     let id: UUID
     let date: Date
