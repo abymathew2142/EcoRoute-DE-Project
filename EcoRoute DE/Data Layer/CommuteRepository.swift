@@ -36,6 +36,7 @@ final class CommuteRepository : CommuteRepositoryProtocol {
                                           distance: trip.distance,
                                           tranportMode: trip.transportMode.rawValue)
         modelContext.insert(dpTrip)
+        try modelContext.save()
     }
     
     func deleteTrip(_ trip: CommuteTrip) async throws {
