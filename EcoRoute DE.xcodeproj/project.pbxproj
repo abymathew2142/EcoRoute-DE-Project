@@ -6,19 +6,60 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		97B315D42FFD9E7A0019AB16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97CB72082FF1C1C30077B217 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97CB720F2FF1C1C30077B217;
+			remoteInfo = "EcoRoute DE";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		97B315D02FFD9E7A0019AB16 /* EcoRoute DETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EcoRoute DETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97CB72102FF1C1C30077B217 /* EcoRoute DE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EcoRoute DE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		97B315DE2FFDA1200019AB16 /* Exceptions for "EcoRoute DE" folder in "EcoRoute DETests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Data Layer/CommuteRepository.swift",
+				"Data Layer/LocationManager.swift",
+				"Data Layer/SwiftDataCommuteTrip.swift",
+				"Domain Layer/CommuteRepositoryProtocol.swift",
+				"Domain Layer/CommuteTrip.swift",
+				"Presentation Layer/CommuteViewModel.swift",
+			);
+			target = 97B315CF2FFD9E7A0019AB16 /* EcoRoute DETests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		97B315D12FFD9E7A0019AB16 /* EcoRoute DETests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "EcoRoute DETests";
+			sourceTree = "<group>";
+		};
 		97CB72122FF1C1C30077B217 /* EcoRoute DE */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				97B315DE2FFDA1200019AB16 /* Exceptions for "EcoRoute DE" folder in "EcoRoute DETests" target */,
+			);
 			path = "EcoRoute DE";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		97B315CD2FFD9E7A0019AB16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		97CB720D2FF1C1C30077B217 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				97CB72122FF1C1C30077B217 /* EcoRoute DE */,
+				97B315D12FFD9E7A0019AB16 /* EcoRoute DETests */,
 				97CB72112FF1C1C30077B217 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				97CB72102FF1C1C30077B217 /* EcoRoute DE.app */,
+				97B315D02FFD9E7A0019AB16 /* EcoRoute DETests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +91,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		97B315CF2FFD9E7A0019AB16 /* EcoRoute DETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97B315D62FFD9E7A0019AB16 /* Build configuration list for PBXNativeTarget "EcoRoute DETests" */;
+			buildPhases = (
+				97B315CC2FFD9E7A0019AB16 /* Sources */,
+				97B315CD2FFD9E7A0019AB16 /* Frameworks */,
+				97B315CE2FFD9E7A0019AB16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97B315D52FFD9E7A0019AB16 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				97B315D12FFD9E7A0019AB16 /* EcoRoute DETests */,
+			);
+			name = "EcoRoute DETests";
+			packageProductDependencies = (
+			);
+			productName = "EcoRoute DETests";
+			productReference = 97B315D02FFD9E7A0019AB16 /* EcoRoute DETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		97CB720F2FF1C1C30077B217 /* EcoRoute DE */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97CB721B2FF1C1C40077B217 /* Build configuration list for PBXNativeTarget "EcoRoute DE" */;
@@ -80,6 +146,10 @@
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
+					97B315CF2FFD9E7A0019AB16 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 97CB720F2FF1C1C30077B217;
+					};
 					97CB720F2FF1C1C30077B217 = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -100,11 +170,19 @@
 			projectRoot = "";
 			targets = (
 				97CB720F2FF1C1C30077B217 /* EcoRoute DE */,
+				97B315CF2FFD9E7A0019AB16 /* EcoRoute DETests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		97B315CE2FFD9E7A0019AB16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		97CB720E2FF1C1C30077B217 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +193,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		97B315CC2FFD9E7A0019AB16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		97CB720C2FF1C1C30077B217 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +209,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		97B315D52FFD9E7A0019AB16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97CB720F2FF1C1C30077B217 /* EcoRoute DE */;
+			targetProxy = 97B315D42FFD9E7A0019AB16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		97B315D72FFD9E7A0019AB16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abymathew.EcoRoute-DETests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcoRoute DE.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EcoRoute DE";
+			};
+			name = Debug;
+		};
+		97B315D82FFD9E7A0019AB16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abymathew.EcoRoute-DETests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcoRoute DE.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EcoRoute DE";
+			};
+			name = Release;
+		};
 		97CB72192FF1C1C40077B217 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -315,6 +448,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		97B315D62FFD9E7A0019AB16 /* Build configuration list for PBXNativeTarget "EcoRoute DETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97B315D72FFD9E7A0019AB16 /* Debug */,
+				97B315D82FFD9E7A0019AB16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		97CB720B2FF1C1C30077B217 /* Build configuration list for PBXProject "EcoRoute DE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

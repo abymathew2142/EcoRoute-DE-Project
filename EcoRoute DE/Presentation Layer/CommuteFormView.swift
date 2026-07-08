@@ -7,30 +7,19 @@
 
 import SwiftUI
 
-enum TransportMode: String, CaseIterable, Identifiable {
-    case car = "car"
-    case bike = "bike"
-    case train = "train"
-    
-    var iconName: String {
-        switch self {
-        case .car: return  "car.fill"
-        case .bike: return "bicycle.fill"
-        case .train: return "train.fill"
-        }
-    }
-    
-    var id: Self { self }
-}
+
 
 
 struct CommuteFormView: View {
     
     @State private var viewModel = CommuteViewModel()
-    
     @State private var distance: String = ""
     @State private var selectedTransportMode: TransportMode = .train
+    @State private var locationManager = LocationManager()
+    @FocusState private var isInputFocused: Bool
     private let modes = TransportMode.allCases
+    
+    
     
     var body: some View {
         NavigationStack {
@@ -53,34 +42,61 @@ struct CommuteFormView: View {
                 .listRowBackground(Color(.systemGray6))
                 
                 
-                // ---- SECTION 2: Input fields ---
-                Section(header: Text("Trip Details")) {
-                    TextField("Distnace (in km)", text: $distance)
-                        .keyboardType(.decimalPad)
-                    
+                // ---- SECTION 2: Input fields , Fraud-Proof tracking system ---
+                Section(header: Text("Secure Commute Tracker")) {
+        
                     Picker("Transport Mode", selection: $selectedTransportMode) {
                         ForEach(modes, id: \.self ) {
                             Text($0.rawValue.capitalized)
-                                
+                        }
+                    }
+                    .disabled(locationManager.isTracking) // Fraud Prevention: changing vehichle during tracking
+                    
+                    if !locationManager.isTracking {
+                        // start tracking
+                        Button(action: {
+                            locationManager.startTracking()
+                        }){
+                            HStack{
+                                Image(systemName: "play.fill")
+                                Text("Start Live Commute")
+                            }
+                            .frame(maxWidth: .infinity)
+                            .bold()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.blue)
+                        
+                    }else {
+                        // stop tracking and save data automatically
+                        Button(action: {
+                            let calculatedDistanceInKM = locationManager.stopTracking()
+                            Task {
+                                await viewModel.logNewTrip(distanceString: "\(calculatedDistanceInKM)",
+                                                           mode: selectedTransportMode)
+                            }
+                        }){
+                            HStack{
+                                Image(systemName: "stop.fill")
+                                Text("End Live Commute")
+                            }
+                            .frame(maxWidth: .infinity)
+                            .bold()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.red)
+                    }
+                    
+                    //progressview adding while tracking start
+                    if locationManager.isTracking {
+                        HStack {
+                            ProgressView()
+                            Text("GPS Tracking active. Keep app open during travel...")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
                         }
                     }
                 }
-                
-                Button(action: {
-                    Task {
-                        await viewModel.logNewTrip(distanceString: distance,
-                                                   mode: selectedTransportMode)
-                        distance = ""
-                    }
-                    
-                }) {
-                    Text("Save Trip")
-                        .frame(maxWidth: .infinity)
-                        .alignmentGuide(.leading) { d in d[.leading] }
-                }
-                .buttonStyle(.borderedProminent)
-                .disabled(distance.isEmpty)
-
                 
                 // --- SECTION 3: RECENT COMMUTES (DYNAMIC LIST) ---
                 
