@@ -14,9 +14,9 @@ enum TransportMode: String, CaseIterable, Identifiable {
     
     var iconName: String {
         switch self {
-        case .car: return  "car.fill"
-        case .bike: return "bicycle.fill"
-        case .train: return "train.fill"
+        case .car: return  "car.circle.fill"
+        case .bike: return "bicycle.circle.fill"
+        case .train: return "tram.circle.fill"
         }
     }
     
