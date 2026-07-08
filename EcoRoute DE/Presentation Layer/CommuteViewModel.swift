@@ -38,6 +38,19 @@ class CommuteViewModel {
         
         guard let distanceDecimal = Double(distanceString) else { return }
         
+        // fraud prevention
+        // 1. absolute maximum commute within reasonalble German borders
+        if distanceDecimal > Constants.maxCommuteDistance {
+            print("Fraud alert : Commute distance is too high")
+            return
+        }
+        
+        //2. Bike physical limits
+        if mode == .bike, distanceDecimal > Constants.minBikingDistance {
+            print("Fraud alert : Biking distance is too high")
+            return
+        }
+        
         let newTrip = CommuteTrip(id: UUID(),
                                   date: Date(),
                                   distance: distanceDecimal,
