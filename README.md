@@ -1,6 +1,6 @@
 # EcoRoute DE 🚄📱
 
-An enterprise-ready iOS utility built entirely in **SwiftUI** designed for German professionals to seamlessly track daily commutes, optimize their carbon footprint, and automate their local tax refunds (*Pendlerpauschale*).
+An enterprise-ready iOS utility built entirely in **SwiftUI** designed for German professionals to seamlessly track daily commutes, optimize their carbon footprint, and automate their local tax refunds (*Pendlerpauschale*). Fraud Prevention using CoreLocation API to avoid manual data tampering for German Tax Office compliance
 
 ## 🏛 Architecture & Design Patterns
 This project uses a decoupled **Three-Layer Clean Architecture** optimized for maximum maintainability and separation of concerns:
