@@ -26,6 +26,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Data Layer/CommuteRepository.swift",
+				"Data Layer/LocationManager.swift",
 				"Data Layer/SwiftDataCommuteTrip.swift",
 				"Domain Layer/CommuteRepositoryProtocol.swift",
 				"Domain Layer/CommuteTrip.swift",
