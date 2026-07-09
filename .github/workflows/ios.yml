@@ -23,7 +23,7 @@ jobs:
       - name: Run Automated Unit Tests
         run: |
          xcodebuild test \
-           -project EcoRoute DE.xcodeproj \
-           -scheme EcoRoute DE \
+           -project EcoRouteDE.xcodeproj \
+           -scheme EcoRouteDE \
            -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
            -quiet
