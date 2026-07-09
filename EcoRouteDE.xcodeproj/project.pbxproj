@@ -17,12 +17,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		97B315D02FFD9E7A0019AB16 /* EcoRoute DETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EcoRoute DETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		97CB72102FF1C1C30077B217 /* EcoRoute DE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EcoRoute DE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B315D02FFD9E7A0019AB16 /* EcoRouteDETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoRouteDETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97CB72102FF1C1C30077B217 /* EcoRouteDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoRouteDE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		97B315DE2FFDA1200019AB16 /* Exceptions for "EcoRoute DE" folder in "EcoRoute DETests" target */ = {
+		97B315DE2FFDA1200019AB16 /* Exceptions for "EcoRoute DE" folder in "EcoRouteDETests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Constants.swift,
@@ -31,7 +31,7 @@
 				"Domain Layer/CommuteRepositoryProtocol.swift",
 				"Domain Layer/CommuteTrip.swift",
 			);
-			target = 97B315CF2FFD9E7A0019AB16 /* EcoRoute DETests */;
+			target = 97B315CF2FFD9E7A0019AB16 /* EcoRouteDETests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -44,7 +44,7 @@
 		97CB72122FF1C1C30077B217 /* EcoRoute DE */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				97B315DE2FFDA1200019AB16 /* Exceptions for "EcoRoute DE" folder in "EcoRoute DETests" target */,
+				97B315DE2FFDA1200019AB16 /* Exceptions for "EcoRoute DE" folder in "EcoRouteDETests" target */,
 			);
 			path = "EcoRoute DE";
 			sourceTree = "<group>";
@@ -81,8 +81,8 @@
 		97CB72112FF1C1C30077B217 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97CB72102FF1C1C30077B217 /* EcoRoute DE.app */,
-				97B315D02FFD9E7A0019AB16 /* EcoRoute DETests.xctest */,
+				97CB72102FF1C1C30077B217 /* EcoRouteDE.app */,
+				97B315D02FFD9E7A0019AB16 /* EcoRouteDETests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		97B315CF2FFD9E7A0019AB16 /* EcoRoute DETests */ = {
+		97B315CF2FFD9E7A0019AB16 /* EcoRouteDETests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97B315D62FFD9E7A0019AB16 /* Build configuration list for PBXNativeTarget "EcoRoute DETests" */;
+			buildConfigurationList = 97B315D62FFD9E7A0019AB16 /* Build configuration list for PBXNativeTarget "EcoRouteDETests" */;
 			buildPhases = (
 				97B315CC2FFD9E7A0019AB16 /* Sources */,
 				97B315CD2FFD9E7A0019AB16 /* Frameworks */,
@@ -106,16 +106,16 @@
 			fileSystemSynchronizedGroups = (
 				97B315D12FFD9E7A0019AB16 /* EcoRoute DETests */,
 			);
-			name = "EcoRoute DETests";
+			name = EcoRouteDETests;
 			packageProductDependencies = (
 			);
 			productName = "EcoRoute DETests";
-			productReference = 97B315D02FFD9E7A0019AB16 /* EcoRoute DETests.xctest */;
+			productReference = 97B315D02FFD9E7A0019AB16 /* EcoRouteDETests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		97CB720F2FF1C1C30077B217 /* EcoRoute DE */ = {
+		97CB720F2FF1C1C30077B217 /* EcoRouteDE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97CB721B2FF1C1C40077B217 /* Build configuration list for PBXNativeTarget "EcoRoute DE" */;
+			buildConfigurationList = 97CB721B2FF1C1C40077B217 /* Build configuration list for PBXNativeTarget "EcoRouteDE" */;
 			buildPhases = (
 				97CB720C2FF1C1C30077B217 /* Sources */,
 				97CB720D2FF1C1C30077B217 /* Frameworks */,
@@ -128,11 +128,11 @@
 			fileSystemSynchronizedGroups = (
 				97CB72122FF1C1C30077B217 /* EcoRoute DE */,
 			);
-			name = "EcoRoute DE";
+			name = EcoRouteDE;
 			packageProductDependencies = (
 			);
 			productName = "EcoRoute DE";
-			productReference = 97CB72102FF1C1C30077B217 /* EcoRoute DE.app */;
+			productReference = 97CB72102FF1C1C30077B217 /* EcoRouteDE.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 97CB720B2FF1C1C30077B217 /* Build configuration list for PBXProject "EcoRoute DE" */;
+			buildConfigurationList = 97CB720B2FF1C1C30077B217 /* Build configuration list for PBXProject "EcoRouteDE" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -168,8 +168,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				97CB720F2FF1C1C30077B217 /* EcoRoute DE */,
-				97B315CF2FFD9E7A0019AB16 /* EcoRoute DETests */,
+				97CB720F2FF1C1C30077B217 /* EcoRouteDE */,
+				97B315CF2FFD9E7A0019AB16 /* EcoRouteDETests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,7 +211,7 @@
 /* Begin PBXTargetDependency section */
 		97B315D52FFD9E7A0019AB16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 97CB720F2FF1C1C30077B217 /* EcoRoute DE */;
+			target = 97CB720F2FF1C1C30077B217 /* EcoRouteDE */;
 			targetProxy = 97B315D42FFD9E7A0019AB16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -449,7 +449,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		97B315D62FFD9E7A0019AB16 /* Build configuration list for PBXNativeTarget "EcoRoute DETests" */ = {
+		97B315D62FFD9E7A0019AB16 /* Build configuration list for PBXNativeTarget "EcoRouteDETests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97B315D72FFD9E7A0019AB16 /* Debug */,
@@ -458,7 +458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97CB720B2FF1C1C30077B217 /* Build configuration list for PBXProject "EcoRoute DE" */ = {
+		97CB720B2FF1C1C30077B217 /* Build configuration list for PBXProject "EcoRouteDE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97CB72192FF1C1C40077B217 /* Debug */,
@@ -467,7 +467,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97CB721B2FF1C1C40077B217 /* Build configuration list for PBXNativeTarget "EcoRoute DE" */ = {
+		97CB721B2FF1C1C40077B217 /* Build configuration list for PBXNativeTarget "EcoRouteDE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97CB721C2FF1C1C40077B217 /* Debug */,
