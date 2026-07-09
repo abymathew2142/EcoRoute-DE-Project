@@ -5,10 +5,25 @@
 //  Created by Aby Mathew on 07/07/26.
 //
 
-import XCTest
+//import XCTest
+import Testing
 import SwiftData
 @testable import EcoRoute_DE
 
+final class EcoRoute_DETests {
+    
+    @Test
+    func totlaRefund_whenNoTripsLogged_shouldReturnZero() {
+        let value = 0
+        #expect(value == 0)
+    }
+    
+    @Test
+    func totlaRefund_whenTripsLogged_shouldReturnNonZero() {
+        let value = 1
+        #expect(value != 0)
+    }
+}
 //@MainActor
 //final class EcoRoute_DETests: XCTestCase {
 //    

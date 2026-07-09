@@ -25,12 +25,11 @@
 		97B315DE2FFDA1200019AB16 /* Exceptions for "EcoRoute DE" folder in "EcoRoute DETests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"Data Layer/CommuteRepository.swift",
+				Constants.swift,
 				"Data Layer/LocationManager.swift",
 				"Data Layer/SwiftDataCommuteTrip.swift",
 				"Domain Layer/CommuteRepositoryProtocol.swift",
 				"Domain Layer/CommuteTrip.swift",
-				"Presentation Layer/CommuteViewModel.swift",
 			);
 			target = 97B315CF2FFD9E7A0019AB16 /* EcoRoute DETests */;
 		};
@@ -224,6 +223,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MP75BHW2RK;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abymathew.EcoRoute-DETests";
@@ -244,6 +244,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MP75BHW2RK;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abymathew.EcoRoute-DETests";
