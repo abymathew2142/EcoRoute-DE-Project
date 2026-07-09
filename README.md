@@ -1,4 +1,5 @@
 ![CI Status](https://github.com/abymathew2142/EcoRoute-DE-Project/workflows/EcoRoute%20DE%20CI/badge.svg)
+
 # EcoRoute DE 🚄📱
 
 An enterprise-ready iOS utility built entirely in **SwiftUI** designed for German professionals to seamlessly track daily commutes, optimize their carbon footprint, and automate their local tax refunds (*Pendlerpauschale*). Fraud Prevention using CoreLocation API to avoid manual data tampering for German Tax Office compliance
