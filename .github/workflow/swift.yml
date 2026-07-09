@@ -10,7 +10,7 @@ on:
 jobs:
   build-and-test:
     # 2. Run on a virtual macOS environment provided free by GitHub
-    runs-on: macos-14
+    runs-on: macos-latest
 
     steps:
     # 3. Pulls your code repository into the virtual runner machine
