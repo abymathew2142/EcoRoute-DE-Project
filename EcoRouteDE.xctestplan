@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "A54EBA18-6C1B-4EF6-854D-034304273597",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:EcoRouteDE.xcodeproj",
+      "identifier" : "97CB720F2FF1C1C30077B217",
+      "name" : "EcoRouteDE"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:EcoRouteDE.xcodeproj",
+        "identifier" : "97B315CF2FFD9E7A0019AB16",
+        "name" : "EcoRouteDETests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -17,6 +17,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97720440300174BA007B282C /* EcoRouteDE.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = EcoRouteDE.xctestplan; sourceTree = "<group>"; };
 		97B315D02FFD9E7A0019AB16 /* EcoRouteDETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoRouteDETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97CB72102FF1C1C30077B217 /* EcoRouteDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoRouteDE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +73,7 @@
 		97CB72072FF1C1C30077B217 = {
 			isa = PBXGroup;
 			children = (
+				97720440300174BA007B282C /* EcoRouteDE.xctestplan */,
 				97CB72122FF1C1C30077B217 /* EcoRoute DE */,
 				97B315D12FFD9E7A0019AB16 /* EcoRoute DETests */,
 				97CB72112FF1C1C30077B217 /* Products */,
