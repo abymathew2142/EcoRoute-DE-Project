@@ -23,7 +23,7 @@ jobs:
       - name: Run Automated Unit Tests
         run: |
          # Query the system for available iOS Simulators, filter for the first matching hardware line, and pull its name identifier safely.
-          DESTINATION_DEVICE=$(xcrun simctl list devices available | grep -m 1 "iPhone" | awk -F '[()]' '{print $1}' | sed 's/[[:space:]]*$//')
+          DESTINATION_DEVICE=$(xcrun simctl list devices available | grep -m 1 "iPhone" | awk -F '[()]' '{print $1}' | xargs)
           echo "🚀 Dynamic Architectural Selection: Running tests on [$DESTINATION_DEVICE]"
           
           xcodebuild test \
