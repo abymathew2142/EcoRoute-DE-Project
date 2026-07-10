@@ -8,7 +8,7 @@
 //import XCTest
 import Testing
 import SwiftData
-@testable import EcoRoute_DE
+@testable import EcoRouteDE
 
 final class EcoRoute_DETests {
     
