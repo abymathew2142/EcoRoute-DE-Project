@@ -30,4 +30,6 @@ jobs:
             -project EcoRouteDE.xcodeproj \
             -scheme EcoRouteDE \
             -destination "platform=iOS Simulator,name=$DESTINATION_DEVICE" \
+            PRODUCT_NAME="EcoRouteDE" \
+            TARGET_NAME="EcoRouteDE" \
             -quiet
