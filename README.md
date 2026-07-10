@@ -1,5 +1,5 @@
 ![CI Status](https://github.com/abymathew2142/EcoRoute-DE-Project/workflows/EcoRoute%20DE%20CI/badge.svg)
-
+[![iOS starter workflow](https://github.com/abymathew2142/EcoRoute-DE-Project/actions/workflows/ios.yml/badge.svg)](https://github.com/abymathew2142/EcoRoute-DE-Project/actions/workflows/ios.yml)
 
 
 # EcoRoute DE 🚄📱
