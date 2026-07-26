@@ -20,9 +20,10 @@ class CommuteViewModel {
         trips.reduce(0){ $0 + $1.taxRefundAmount}
     }
     
-
+    
+    
     // Depending on protocol, not the concrete implementation ( Dependency Inversion Principle )
-    init(repository: CommuteRepositoryProtocol = CommuteRepository()) {
+    init(repository: CommuteRepositoryProtocol = OfflineFirstCommuteRepository()) {
         self.repository = repository
     }
     
