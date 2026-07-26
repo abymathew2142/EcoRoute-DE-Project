@@ -246,6 +246,16 @@ struct CommuteFormView: View {
         NavigationStack {
             List {
                 // ---- SECTION 1: TAX SUMMARY ---
+                if !viewModel.trips.isEmpty {
+                    Section {
+                        ShareLink(item: viewModel.generatePDFReport() ?? URL(fileURLWithPath: "")) {
+                            Label("Export PDF for Finanzamt", systemImage: "doc.plaintext.fill")
+                                .frame(maxWidth: .infinity)
+                                .bold()
+                                .foregroundColor(.blue)
+                        }
+                    }
+                }
                 Section {
                     VStack(spacing: 8){
                         Text("Estimated German Tax Refund")
