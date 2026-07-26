@@ -7,6 +7,7 @@
 
 import Foundation
 import Observation
+import SwiftUI
 
 
 @Observable
@@ -77,5 +78,32 @@ class CommuteViewModel {
         }
         await loadTrips()
         
+    }
+}
+
+
+extension CommuteViewModel {
+    
+    
+    @MainActor
+    func generatePDFReport() -> URL? {
+        
+        let pdfView = CommutePDFView(trips: self.trips, totalRefund: self.totalRefund)
+        
+        let renderer = ImageRenderer(content: pdfView)
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent("CommuteReport.pdf")
+        
+        renderer.render { size, context in
+            var box = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+            guard let pdfContext = CGContext(url as CFURL, mediaBox: &box, nil) else { return }
+            
+            pdfContext.beginPDFPage(nil)
+            context(pdfContext) 
+            pdfContext.endPDFPage()
+            pdfContext.closePDF()
+        }
+        
+        print("PDF Successfully generated at: \(url)")
+        return url
     }
 }

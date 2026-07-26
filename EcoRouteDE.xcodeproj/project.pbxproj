@@ -27,10 +27,10 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Constants.swift,
-				"Data Layer/LocationManager.swift",
-				"Data Layer/SwiftDataCommuteTrip.swift",
-				"Domain Layer/CommuteRepositoryProtocol.swift",
-				"Domain Layer/CommuteTrip.swift",
+				"Daily Commute /Data Layer/LocationManager.swift",
+				"Daily Commute /Data Layer/SwiftDataCommuteTrip.swift",
+				"Daily Commute /Domain Layer/CommuteRepositoryProtocol.swift",
+				"Daily Commute /Domain Layer/CommuteTrip.swift",
 			);
 			target = 97B315CF2FFD9E7A0019AB16 /* EcoRouteDETests */;
 		};
