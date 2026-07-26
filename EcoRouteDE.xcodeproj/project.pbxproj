@@ -28,6 +28,7 @@
 			membershipExceptions = (
 				Constants.swift,
 				"Daily Commute /Data Layer/LocationManager.swift",
+				"Daily Commute /Data Layer/OfflineFirstCommuteRepository.swift",
 				"Daily Commute /Data Layer/SwiftDataCommuteTrip.swift",
 				"Daily Commute /Domain Layer/CommuteRepositoryProtocol.swift",
 				"Daily Commute /Domain Layer/CommuteTrip.swift",

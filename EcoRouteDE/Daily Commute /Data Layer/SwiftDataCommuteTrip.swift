@@ -13,12 +13,14 @@ import SwiftData
     var date: Date
     var distance: Double
     var tranportMode: String
+    var isSynced: Bool
 
-    init(id: UUID = UUID(), date: Date, distance: Double, tranportMode: String) {
+    init(id: UUID = UUID(), date: Date = Date(), distance: Double, tranportMode: String, isSynced: Bool = false) {
         self.id = id
         self.date = date
         self.distance = distance
         self.tranportMode = tranportMode
+        self.isSynced = isSynced
     }
     
     func toDomain() -> CommuteTrip {
